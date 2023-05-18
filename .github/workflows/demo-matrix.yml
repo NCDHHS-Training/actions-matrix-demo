@@ -28,6 +28,8 @@ jobs:
      steps:
         - name: Setup Java JDK
           uses: actions/setup-java@v1.4.4
+          with:
+            java-version: '8'
           
         - name: "Print Java version"
           run: "java --version"
