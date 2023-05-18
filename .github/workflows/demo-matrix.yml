@@ -22,3 +22,13 @@ jobs:
       - if: ${{ matrix.npm }}
         run: npm install -g npm@${{ matrix.npm }}
       - run: npm --version
+      
+  install_jdk:
+     runs-on: ubuntu-latest
+     steps:
+        - name: Setup Java JDK
+          uses: actions/setup-java@v1.4.4
+          
+        - name: "Print Java version"
+          run: "java --version"
+
